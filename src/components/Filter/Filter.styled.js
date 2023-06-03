@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
-export const FilterWrap = styled.label`
- 
-`;
-
-export const Text = styled.p`
- font-size: 24px;
-`;
-
-export const FilterInput = styled.input`
+export const Input = styled.input`
   padding: 10px;
   font-size: 24px;
   border-radius: 6px;

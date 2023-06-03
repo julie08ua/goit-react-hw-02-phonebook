@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import {FilterWrap, Text,FilterInput} from './Filter.styled';
+import { Input} from './Filter.styled';
 
 export const Filter = ({ value, changeFilter }) => (
-    <FilterWrap>
-        <Text>Find contacts by name</Text>
-    <FilterInput
+    <label>
+        <p>Find contacts by name</p>
+    <Input
         type="text"
         value={value}
         onChange={changeFilter} />
-    </FilterWrap>
+    </label>
 );
 
 

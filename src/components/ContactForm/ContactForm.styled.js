@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const ContactFormWrap = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  padding: 40px;
-  border: 0,5px solid grey;
-  box-shadow: 0 1px 6px 0 #20212447;
-  border-radius: 10px;
-`;
-
 export const Input = styled.input`
   padding: 10px;
   margin-bottom: 10px;
@@ -25,9 +15,8 @@ export const Text = styled.p`
   font-size: 24px;
 `;
 
-
-export const ButtonSubmit = styled.button`
-display: inline-block;
+export const Button = styled.button`
+  display: block;
   width: fit-content;
   margin-top: 10px;
   border-radius: 7px;

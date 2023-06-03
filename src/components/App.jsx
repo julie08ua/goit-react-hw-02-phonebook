@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactsList } from './ContactsList/ContactsList';
 import { Filter } from './Filter/Filter';
-import { Container } from './App.styled';
+
 
 export class App extends Component {
     state = {
@@ -40,7 +40,7 @@ export class App extends Component {
         );
 
         return (
-            <Container>
+            <section>
                 <h1>Phonebook</h1>
                 <ContactForm onSubmit={this.formSubmit} />
 
@@ -52,7 +52,7 @@ export class App extends Component {
                         deleteContact={this.deleteContact}
                     />
                 )}
-            </Container>
+            </section>
         );
     }
 }

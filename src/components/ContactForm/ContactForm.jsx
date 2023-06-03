@@ -1,14 +1,13 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
-import {ContactFormWrap, ButtonSubmit, Input, Text} from './ContactForm.styled';
+import {Input, Button,Text} from './ContactForm.styled';
 
 export class ContactForm extends Component {
     state = {
         name: '',
         number: '',
-    };
-
+    };Text
     handleChange = ({target}) => {
         this.setState({ [target.name]: target.value });
     };
@@ -23,7 +22,7 @@ export class ContactForm extends Component {
 
     render() {
         return (
-            <ContactFormWrap onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <label>
                     <Text>Name</Text>
                     <Input
@@ -50,8 +49,8 @@ export class ContactForm extends Component {
                     />
                 </label>
                 
-                <ButtonSubmit type="submit">Add contact</ButtonSubmit>
-            </ContactFormWrap>
+                <Button type="submit">Add contact</Button>
+            </form>
         );
     }
 }
