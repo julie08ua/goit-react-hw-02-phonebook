@@ -11,16 +11,15 @@ export class App extends Component {
     };
 
     formSubmit = data => {
-        if (
-            this.state.contacts.find(
+        const checkName = this.state.contacts.find(
                 ({name}) => name.toLowerCase() === data.name.toLowerCase()
-            )
-        ) {
+        )
+        
+        if (checkName) {
             alert(`${data.name} is already in contacts.`);
-          } else {
-            this.state.contacts.push(data);
+        } else {
+            this.setState(prevState => ({ contacts: [...prevState.contacts, data] }));
           }
-        this.setState({ contacts: this.state.contacts });
     };
 
     deleteContact = id => {
